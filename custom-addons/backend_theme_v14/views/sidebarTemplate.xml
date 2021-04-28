@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2017-2018 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<template id="app_sidebar" inherit_id="web.webclient_bootstrap" name="Apps Sidebar">
+    <xpath expr="//t[@t-set='body_classname']" position="after">
+        <div id="app-sidebar" class="app-sidebar-panel">
+            <div class="app-sidebar" t-name="sidebar-template">
+                <ul id="sidebar" class="app-sidebar-menu">
+                    <li class="nav-item">test</li>
+                </ul>
+            </div>
+        </div>
+    </xpath>
+</template>

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record model="base.external.dbsource" id="demo_oracle">
+        <field name="name">VPS</field>
+        <field name="conn_string">10.58.71.178:1521/dbpt</field>
+        <field name="password">VPS#123</field>
+        <field name="connector">cx_Oracle</field>
+    </record>
+</odoo>

@@ -1,0 +1,3 @@
+
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+action_server_view_access,action_server_view_access,model_test_module_categories,group_manager_openacademy,1,1,1,1

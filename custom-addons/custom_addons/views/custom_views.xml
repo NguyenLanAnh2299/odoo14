@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_categories_tree">
+        <field name="name">view.categories.tree</field>
+        <field name="model">test_module.categories</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="categories">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="categories_list_action">
+        <field name="name">Categories</field>
+        <field name="res_model">test_module.categories</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first course
+            </p>
+        </field>
+    </record>
+<!--    <record model="ir.actions.server" id="action_server_view">-->
+<!--      <field name="name">model_custom_categories server</field>-->
+<!--      <field name="model_id" ref="model_test_module_categories"/>-->
+<!--      <field name="type">ir.actions.server</field>-->
+<!--      <field name="state">code</field>-->
+<!--      <field name="code">action = model.get_odbc_data()</field>-->
+<!--    </record>-->
+
+    <record id="action_custom_categories" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">test_module.categories</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- top level menu: no parent -->
+    <menuitem id="custom_categories_menu_root" name="Custom categories" sequence="0"/>
+    <!-- A first level in the left side menu is needed
+         before using action= attribute -->
+    <menuitem id="custom_categories_menu" name="Custom categories"
+              parent="custom_categories_menu_root" action="categories_list_action"/>
+</odoo>
